@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team 06 — Fullscreen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --page-bg:#0c0d0f;
+      --surface:#101216;
+      --text:#e9eef3;
+      --muted:#a6b0b9;
+      --brand:#1da1ff;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;width:100%}
+    body{
+      background:var(--page-bg);
+      font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      color:var(--text);
+      display:flex;
+      flex-direction:column;
+    }
+
+    header.site-header{
+      padding:20px 32px;
+      background:#0f1115;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:6px;
+    }
+    header.site-header h1{font-size:22px;font-weight:800;color:var(--brand)}
+    header.site-header .subtitle{font-size:15px;color:var(--muted)}
+
+    main{
+      flex:1;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
+    }
+
+    .team__wrap{
+      width:100%;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      padding:40px;
+      background:var(--surface);
+    }
+
+    .team__title{
+      font-weight:800;
+      font-size:clamp(28px,3vw,40px);
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .team__grid{
+      width:100%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:40px;
+      justify-items:center;
+    }
+
+    .member{display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
+    .avatar{width:200px;aspect-ratio:1/1;border-radius:50%;overflow:hidden;background:#16181b;border:2px solid rgba(255,255,255,.06);transition:.3s}
+    .avatar img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%)}
+    .member:hover .avatar{transform:translateY(-6px);box-shadow:0 12px 30px rgba(0,0,0,.45)}
+
+    .role{font-size:16px;font-weight:800;letter-spacing:.04em}
+    .name{font-size:14px;color:var(--muted)}
+
+    .team__blurb{margin-top:40px;text-align:center;color:var(--muted);font-size:18px;max-width:80ch}
+
+    footer.site-footer{
+      padding:18px;
+      text-align:center;
+      font-size:14px;
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,.08);
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <h1>CSC 648 Software Engineering — Team 06</h1>
+    <div class="subtitle">Fall 2025 • Section 03</div>
+  </header>
+
+  <main>
+    <div class="team__wrap">
+      <h2 class="team__title">Meet Our Team</h2>
+      <div class="team__grid">
+        <div class="member">
+          <a href="tony.html">
+            <div class="avatar"><img src="img/tony.jpg" alt="Backend Lead portrait"></div>
+          </a>
+          <div class="role">BACKEND LEAD</div>
+          <div class="name">Tony Huang</div>
+        </div>
+        <div class="member">
+          <a href="anurag.html">
+            <div class="avatar"><img src="img/anurag.jpg" alt="GitHub Master portrait"></div>
+          </a>
+          <div class="role">GITHUB MASTER</div>
+          <div class="name">Anurag Sanadi</div>
+        </div>
+        <div class="member">
+          <a href="mukisa.html">
+            <div class="avatar"><img src="img/mukisa.png" alt="Team Lead portrait"></div>
+          </a>
+            <div class="role">TEAM LEAD</div>
+          <div class="name">Mukisa Lubega</div>
+        </div>
+        <div class="member">
+          <a href="grishma.html">
+            <div class="avatar"><img src="img/grishma.jpg" alt="Team CTO portrait"></div>
+         </a>
+          <div class="role">TEAM CTO</div>
+          <div class="name">Grishma Thumar</div>
+        </div>
+        <div class="member">
+            <a href="abinash.html">
+                <div class="avatar"><img src="img/abinash.jpg" alt="Frontend Lead portrait"></div>
+            </a>
+          <div class="role">FRONTEND LEAD</div>
+          <div class="name">Abinash Shrestha</div>
+        </div>
+      </div>
+      <p class="team__blurb">We are Team 06 — building a modern, scalable web app for our SFSU Software Engineering course.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">© 2025 Team 06. All rights reserved.</footer>
+</body>
+</html>

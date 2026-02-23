@@ -1,0 +1,28 @@
+{
+  "name": "team06-api",
+  "version": "1.0.0",
+  "description": "Team 06 Backend API — Express + MySQL for CSC 648/848 Fall 2025",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "health": "curl -s http://127.0.0.1:3000/api/health && echo"
+  },
+  "keywords": [],
+  "author": "Team 06 - Section 03",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^2.0.2",
+    "mysql2": "^3.15.3"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^6.0.0",
+    "nodemon": "^3.1.10"
+  }
+}
